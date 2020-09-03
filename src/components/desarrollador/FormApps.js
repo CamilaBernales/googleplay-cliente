@@ -43,7 +43,7 @@ const FormApps = () => {
         setEditar(true);
         setAppEditada(res.data.app);
       })
-      .catch((err) => {
+      .catch(() => {
         setError(true);
       });
   };
@@ -195,6 +195,7 @@ const FormApps = () => {
       setEditar(false);
       obtenerApps();
     }, 2000);
+    // eslint-disable-next-line
   }, [currentPage]);
   return (
     <>

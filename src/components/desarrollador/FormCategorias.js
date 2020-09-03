@@ -7,7 +7,6 @@ import {
   Button,
   Alert,
   Table,
-  Image,
   Spinner,
 } from "react-bootstrap";
 import Swal from "sweetalert2";

@@ -45,6 +45,7 @@ const Compra = ({ carritoLS }) => {
       pedido: JSON.parse(localStorage.getItem("compras")),
       fecha_compra: Date.now(),
     });
+    // eslint-disable-next-line
   }, [total]);
 
   const crearCompra = () => {

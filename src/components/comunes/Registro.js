@@ -42,7 +42,8 @@ export default function Registro() {
       .then(() => {
         window.location.href = "/login";
       })
-      .catch(() => {
+      .catch((err) => {
+        setMsgError(err.response.data.msg)
         setError(true);
       });
   };

@@ -4,7 +4,6 @@ import { Modal, Col, Row, Button, Alert } from "react-bootstrap";
 export default function ModalApp(props) {
   const { modalShow, aplicacion, setCarritoLS, onHide } = props;
   const [appRepetida, setAppRepetida] = useState(false);
-  console.log(setCarritoLS);
   const guardarProducto = (aplicacion) => {
     const compras = JSON.parse(localStorage.getItem("compras")) || [];
     let buscada = compras.find((app) => app._id === aplicacion._id);
@@ -52,7 +51,7 @@ export default function ModalApp(props) {
         </Row>
         <Row className="d-flex justify-content-end my-4 mx-2">
           <Button
-            disabled={appRepetida == true}
+            disabled={appRepetida === true}
             onClick={() => guardarProducto(aplicacion)}
             className="btn btn-info"
           >

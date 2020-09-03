@@ -10,7 +10,6 @@ const Carrito = (props) => {
     setCarritoLS,
     isLogin
   } = props;
-  console.log(setCarritoLS)
   return (
     <Modal id="Carrito" show={modalShow} onHide={onHide}>
       <Modal.Header closeButton className="text-align-center">

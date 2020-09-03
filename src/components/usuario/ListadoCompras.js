@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button, Col, Image, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 
 const ListadoCompras = (props) => {
   const { setCarritoLS, carritoLS } = props;

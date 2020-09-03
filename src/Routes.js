@@ -18,7 +18,6 @@ const Routes = () => {
   const [loading, setLoading] = useState(true);
   const [respuesta, setRespuesta] = useState({});
   const [carritoLS, setCarritoLS] = useState(0);
-  console.log(setCarritoLS);
   useEffect(() => {
     const uservalidation = async () => {
       const token = localStorage.getItem("token");
@@ -39,7 +38,6 @@ const Routes = () => {
       setCarritoLS(compras.length);
     }
   }, []);
-  console.log(setCarritoLS);
   return (
     <div>
       {loading ? (

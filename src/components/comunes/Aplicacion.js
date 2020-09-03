@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import { Col, Card, Button, Alert, Row } from "react-bootstrap";
+import { Col, Card, Button, Row } from "react-bootstrap";
 import ModalApp from "./ModalApp";
 export default function Aplicacion(props) {
   const { aplicacion, setCarritoLS } = props;
-  console.log(setCarritoLS);
   const { _id, nombre, precio, imagen } = aplicacion;
   const [modalShow, setModalShow] = React.useState(false);
 

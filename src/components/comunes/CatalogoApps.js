@@ -13,7 +13,6 @@ import axiosConfig from "../../config/axios";
 
 const CatalogoApps = (props) => {
   const { setCarritoLS } = props;
-  console.log(setCarritoLS);
   const [aplicaciones, setApps] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [filtrar, setFiltrar] = useState(false);
@@ -48,7 +47,6 @@ const CatalogoApps = (props) => {
       .get("/api/categoria/list")
       .then((res) => setCategorias(res.data.categorias))
       .catch((err) => {
-        console.log(err.reponse);
         setError(true);
         setErrorMsg("Hubo un error.");
       });
@@ -58,7 +56,6 @@ const CatalogoApps = (props) => {
     axiosConfig
       .get(`/api/app/list?pagina=${currentPage}`)
       .then((res) => {
-        console.log(res);
         setApps(res.data.aplicaciones.docs);
         setTotalPages(res.data.totalPages);
       })
@@ -152,7 +149,7 @@ const CatalogoApps = (props) => {
                   >
                     <option value="">Todos</option>
                     {categorias.map((categoria) => (
-                      <option value={categoria._id}>{categoria.titulo}</option>
+                      <option key={categoria._id} value={categoria._id}>{categoria.titulo}</option>
                     ))}
                   </Form.Control>
                 </Form.Group>
